@@ -13,5 +13,4 @@ Java – Linguagem principal.
 Spring Boot – Framework para desenvolvimento do backend.
 
 **🔹 Frontend:**
-
 React (Vite) – Framework para construção da interface.
