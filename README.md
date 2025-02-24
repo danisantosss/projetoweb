@@ -14,4 +14,6 @@ Spring Boot – Framework para desenvolvimento do backend.
 
 **🔹 Frontend:**
 
+TypeScript - Linguagem principal.
+
 React (Vite) – Framework para construção da interface.
