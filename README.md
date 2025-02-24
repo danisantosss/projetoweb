@@ -7,6 +7,7 @@ O sistema visa facilitar a administração escolar, permitindo que os responsáv
 
 🔹 Backend:
 Java – Linguagem principal.
+
 Spring Boot – Framework para desenvolvimento do backend.
 
 🔹 Frontend:
