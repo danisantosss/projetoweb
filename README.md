@@ -23,38 +23,38 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 💡 Estratégias de Desenvolvimento
 ---
 
-• Divisão em Módulos: Separação do backend e frontend para facilitar a manutenção e escalabilidade.
+• **Divisão em Módulos:** Separação do backend e frontend para facilitar a manutenção e escalabilidade.
 
-• Uso de API REST: Comunicação entre frontend e backend de forma padronizada.
+• **Uso de API REST:** Comunicação entre frontend e backend de forma padronizada.
 
-• Banco de Dados Relacional: Utilização de um banco relacional para garantir integridade dos dados.
+• **Banco de Dados Relacional:** Utilização de um banco relacional para garantir integridade dos dados.
 
-• Testes básicos: Verificação das principais funcionalidades para garantir funcionamento adequado.
+• **Testes básicos:** Verificação das principais funcionalidades para garantir funcionamento adequado.
 
 📌 Requisitos Funcionais (RF)
 ---
 
-RF01 – O sistema deve permitir o cadastro de alunos com nome, CPF e data de nascimento.
+**RF01** – O sistema deve permitir o cadastro de alunos com nome, CPF e data de nascimento.
 
-RF02 – O sistema deve permitir a listagem, edição e remoção de alunos.
+**RF02** – O sistema deve permitir a listagem, edição e remoção de alunos.
 
-RF03 – O sistema deve permitir o cadastro de turmas com nome e ano letivo.
+**RF03** – O sistema deve permitir o cadastro de turmas com nome e ano letivo.
 
-RF04 – O sistema deve permitir a listagem, edição e remoção de turmas.
+**RF04** – O sistema deve permitir a listagem, edição e remoção de turmas.
 
-RF05 – O sistema deve permitir associar alunos a turmas e visualizar essa associação.
+**RF05** – O sistema deve permitir associar alunos a turmas e visualizar essa associação.
 
 📌 Requisitos Não Funcionais (RNF)
 ---
-RNF01 – O backend deve ser desenvolvido em Java (Spring Boot).
+**RNF01** – O backend deve ser desenvolvido em Java (Spring Boot).
 
-RNF02 – O frontend deve ser desenvolvido com React + TypeScript.
+**RNF02** – O frontend deve ser desenvolvido com React + TypeScript.
 
-RNF03 – O sistema deve utilizar um banco de dados relacional.
+**RNF03** – O sistema deve utilizar um banco de dados relacional.
 
-RNF04 – O sistema deve utilizar REST API para comunicação entre frontend e backend.
+**RNF04** – O sistema deve utilizar REST API para comunicação entre frontend e backend.
 
-RNF05 – O sistema deve ser responsivo para acesso em diferentes dispositivos.
+**RNF05** – O sistema deve ser responsivo para acesso em diferentes dispositivos.
 
 ⚙ Arquitetura Monolítica
 ---
@@ -68,12 +68,12 @@ RNF05 – O sistema deve ser responsivo para acesso em diferentes dispositivos.
 🚀 Plano de Trabalho
 ---
 
-• Configuração do projeto
+• Configuração do projeto.
 
-• Desenvolvimento do back-end
+• Desenvolvimento do back-end.
 
-• Desenvolvimento do front-end
+• Desenvolvimento do front-end.
 
-• Testes e ajutes
+• Testes e ajutes.
 
-• Finalização e Documentação
+• Finalização e Documentação.
