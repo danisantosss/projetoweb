@@ -41,4 +41,4 @@ RNF03 – O sistema deve utilizar um banco de dados relacional.
 
 RNF04 – O sistema deve utilizar REST API para comunicação entre frontend e backend.
 
-✅ RNF05 – O sistema deve ser responsivo para acesso em diferentes dispositivos.
+RNF05 – O sistema deve ser responsivo para acesso em diferentes dispositivos.
