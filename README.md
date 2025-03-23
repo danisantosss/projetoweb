@@ -74,6 +74,8 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 
 • Desenvolvimento do front-end.
 
+• Integração entre o back e o front.
+
 • Testes e ajutes.
 
 • Finalização e Documentação.
