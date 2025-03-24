@@ -1,2 +1,2 @@
 ### Buscar todos os alunos
-GET http://localhost:8080/clientes
+GET http://localhost:8080/aluno

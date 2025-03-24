@@ -2,6 +2,8 @@ package com.projetoweb.gerenciadorescolar.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +27,7 @@ public class Turma {
     private int anoLetivo;
 
     @OneToMany(mappedBy = "turma", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Aluno> alunos;
 
     @ManyToMany
