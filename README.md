@@ -83,4 +83,4 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 Modelo Entidade Relacionamento
 ---
 
-![Modelagem ER](backend\gerenciadorescolar\gerenciadorescolar\src\main\resources\templates\diagrama.png)
+![Modelagem ER](backend/gerenciadorescolar/gerenciadorescolar/src/main/resources/templates/diagrama.png)
