@@ -1,5 +1,7 @@
 package com.projetoweb.gerenciadorescolar.entity;
 
+import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,4 +16,6 @@ public class Aluno {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    private String cpf;
+    private Date dataNascimento;
 }
