@@ -1,9 +1,16 @@
 package com.projetoweb.gerenciadorescolar.entity;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -16,4 +23,15 @@ public class Turma {
     private Long id;
     private String nome;
     private int anoLetivo;
+
+    @OneToMany(mappedBy = "turma", cascade = CascadeType.ALL)
+    private List<Aluno> alunos;
+
+    @ManyToMany
+    @JoinTable(
+        name = "turma_professor",
+        joinColumns = @JoinColumn(name = "turma_id"),
+        inverseJoinColumns = @JoinColumn(name = "professor_id")
+    )
+    private List<Professor> professores;
 }
