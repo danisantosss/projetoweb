@@ -34,7 +34,7 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 📌 Requisitos Funcionais (RF)
 ---
 
-**RF01** – O sistema deve permitir o cadastro de alunos com nome, CPF e data de nascimento.
+**RF01** – O sistema deve permitir o cadastro de alunos com nome, CPF, email e data de nascimento.
 
 **RF02** – O sistema deve permitir a listagem, edição e remoção de alunos.
 
@@ -42,7 +42,12 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 
 **RF04** – O sistema deve permitir a listagem, edição e remoção de turmas.
 
-**RF05** – O sistema deve permitir associar alunos a turmas e visualizar essa associação.
+**RF05** - O sistema deve permitir o cadastro de professores com nome, CPF, email e disciplina.
+
+**RF06** - O sistema deve permitir a listagem, edição e remoção de professores.
+
+**RF07** – O sistema deve permitir associar alunos e professores a turmas e visualizar essa associação.
+
 
 📌 Requisitos Não Funcionais (RNF)
 ---
