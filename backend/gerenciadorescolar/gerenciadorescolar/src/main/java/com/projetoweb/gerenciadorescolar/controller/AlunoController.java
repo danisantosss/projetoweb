@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projetoweb.gerenciadorescolar.entity.Aluno;
+import com.projetoweb.gerenciadorescolar.entity.AlunoDTO;
 import com.projetoweb.gerenciadorescolar.repository.AlunoRepository;
 
 @RestController
@@ -18,8 +19,8 @@ public class AlunoController {
     private AlunoRepository repository;
 
     @GetMapping
-    public List<Aluno> getAll(){
-        List<Aluno> listaAlunos = repository.findAll();
+    public List<AlunoDTO> getAll(){
+        List<AlunoDTO> listaAlunos = repository.findAll().stream().map(AlunoDTO::new).toList();
         return listaAlunos;
     }
 }
