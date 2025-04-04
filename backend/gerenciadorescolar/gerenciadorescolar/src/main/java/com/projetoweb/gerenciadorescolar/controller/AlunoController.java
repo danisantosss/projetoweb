@@ -26,16 +26,16 @@ public class AlunoController {
     @Autowired
     private AlunoRepository repository;
 
-    @GetMapping
-    public List<AlunoDTO> getAll(){
-        List<AlunoDTO> listaAlunos = repository.findAll().stream().map(AlunoDTO::new).toList();
-        return listaAlunos;
-    }
-
     @PostMapping
     public ResponseEntity<AlunoDTO> create(@RequestBody Aluno aluno) {
         Aluno novoAluno = repository.save(aluno);
         return ResponseEntity.status(HttpStatus.CREATED).body(new AlunoDTO(novoAluno));
+    }
+
+    @GetMapping
+    public List<AlunoDTO> getAll(){
+        List<AlunoDTO> listaAlunos = repository.findAll().stream().map(AlunoDTO::new).toList();
+        return listaAlunos;
     }
 
     @PutMapping("/{id}")
