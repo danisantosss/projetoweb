@@ -52,11 +52,11 @@ public class AlunoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    public ResponseEntity<String> delete(@PathVariable Long id) {
         if (repository.existsById(id)) {
             repository.deleteById(id);
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.ok("Aluno deletado com sucesso.");
         }
-        return ResponseEntity.notFound().build();
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aluno não encontrado.");
     }
 }
