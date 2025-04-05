@@ -4,5 +4,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.projetoweb.gerenciadorescolar.entity.Aluno;
 
-public interface AlunoRepository extends JpaRepository<Aluno, Long> {
-}
+public interface AlunoRepository extends JpaRepository<Aluno, Long> {}
