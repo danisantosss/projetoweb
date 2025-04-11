@@ -24,37 +24,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class AlunoController {
 
     @Autowired
-    private AlunoRepository repository;
+    private AlunoRepository alunoRepository;
 
     @PostMapping
     public ResponseEntity<AlunoDTO> create(@RequestBody Aluno aluno) {
-        Aluno novoAluno = repository.save(aluno);
+        Aluno novoAluno = alunoRepository.save(aluno);
         return ResponseEntity.status(HttpStatus.CREATED).body(new AlunoDTO(novoAluno));
     }
 
     @GetMapping
     public List<AlunoDTO> getAll(){
-        List<AlunoDTO> listaAlunos = repository.findAll().stream().map(AlunoDTO::new).toList();
+        List<AlunoDTO> listaAlunos = alunoRepository.findAll().stream().map(AlunoDTO::new).toList();
         return listaAlunos;
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<AlunoDTO> update(@PathVariable Long id, @RequestBody Aluno dados) {
-        return repository.findById(id).map(aluno -> {
+        return alunoRepository.findById(id).map(aluno -> {
             aluno.setNome(dados.getNome());
             aluno.setCpf(dados.getCpf());
             aluno.setEmail(dados.getEmail());
             aluno.setDataNascimento(dados.getDataNascimento());
             aluno.setTurma(dados.getTurma());
-            Aluno atualizado = repository.save(aluno);
+            Aluno atualizado = alunoRepository.save(aluno);
             return ResponseEntity.ok(new AlunoDTO(atualizado));
         }).orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> delete(@PathVariable Long id) {
-        if (repository.existsById(id)) {
-            repository.deleteById(id);
+        if (alunoRepository.existsById(id)) {
+            alunoRepository.deleteById(id);
             return ResponseEntity.ok("Aluno deletado com sucesso.");
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aluno não encontrado.");
