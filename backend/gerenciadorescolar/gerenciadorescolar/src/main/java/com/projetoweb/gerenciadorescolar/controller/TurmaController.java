@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,5 +34,17 @@ public class TurmaController {
     public List<TurmaDTO> getAll(){
         List<TurmaDTO> listaTurmas = turmaRepository.findAll().stream().map(TurmaDTO::new).toList();
         return listaTurmas;
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<TurmaDTO> update(@PathVariable Long id, @RequestBody Turma dados){
+        return turmaRepository.findById(id).map(turma -> {
+            turma.setNome(dados.getNome());
+            turma.setAnoLetivo(dados.getAnoLetivo());
+            turma.setProfessores(dados.getProfessores());
+
+            Turma turmaAtualizada = turmaRepository.save(turma);
+            return ResponseEntity.ok(new TurmaDTO(turmaAtualizada));
+        }).orElse(ResponseEntity.notFound().build());
     }
 }
