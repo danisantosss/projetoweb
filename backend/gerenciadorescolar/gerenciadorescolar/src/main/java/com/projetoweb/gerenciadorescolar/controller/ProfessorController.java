@@ -1,8 +1,11 @@
 package com.projetoweb.gerenciadorescolar.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,5 +26,11 @@ public class ProfessorController {
     public ResponseEntity<ProfessorDTO> create (@RequestBody Professor professor) {
         Professor novoProfessor = professorRepository.save(professor);
         return ResponseEntity.status(HttpStatus.CREATED).body(new ProfessorDTO(novoProfessor));
+    }
+
+    @GetMapping
+    public List<ProfessorDTO> getAll() {
+        List<ProfessorDTO> listaProfessores = professorRepository.findAll().stream().map(ProfessorDTO::new).toList();
+        return listaProfessores;
     }
 }
