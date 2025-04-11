@@ -55,7 +55,7 @@ public class AlunoController {
     public ResponseEntity<String> delete(@PathVariable Long id) {
         if (alunoRepository.existsById(id)) {
             alunoRepository.deleteById(id);
-            return ResponseEntity.ok("Aluno deletado com sucesso.");
+            return ResponseEntity.ok("Aluno deletado com sucesso!");
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aluno não encontrado.");
     }
