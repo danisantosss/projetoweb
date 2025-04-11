@@ -33,7 +33,7 @@ public class AlunoController {
     }
 
     @GetMapping
-    public List<AlunoDTO> getAll(){
+    public List<AlunoDTO> getAll() {
         List<AlunoDTO> listaAlunos = alunoRepository.findAll().stream().map(AlunoDTO::new).toList();
         return listaAlunos;
     }

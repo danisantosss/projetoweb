@@ -52,7 +52,7 @@ public class ProfessorController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Long id){
+    public ResponseEntity<String> delete(@PathVariable Long id) {
         if (professorRepository.existsById(id)){
             professorRepository.deleteById(id);
             return ResponseEntity.ok("Professor deletado com sucesso!");

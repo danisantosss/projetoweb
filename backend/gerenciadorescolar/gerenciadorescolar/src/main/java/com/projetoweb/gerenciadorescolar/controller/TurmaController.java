@@ -26,19 +26,19 @@ public class TurmaController {
     TurmaRepository turmaRepository;
 
     @PostMapping
-    public ResponseEntity<TurmaDTO> create (@RequestBody Turma turma){
+    public ResponseEntity<TurmaDTO> create (@RequestBody Turma turma) {
         Turma novaTurma = turmaRepository.save(turma);
         return ResponseEntity.status(HttpStatus.CREATED).body(new TurmaDTO(novaTurma));
     }
 
     @GetMapping
-    public List<TurmaDTO> getAll(){
+    public List<TurmaDTO> getAll() {
         List<TurmaDTO> listaTurmas = turmaRepository.findAll().stream().map(TurmaDTO::new).toList();
         return listaTurmas;
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<TurmaDTO> update(@PathVariable Long id, @RequestBody Turma dados){
+    public ResponseEntity<TurmaDTO> update(@PathVariable Long id, @RequestBody Turma dados) {
         return turmaRepository.findById(id).map(turma -> {
             turma.setNome(dados.getNome());
             turma.setAnoLetivo(dados.getAnoLetivo());
@@ -50,7 +50,7 @@ public class TurmaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Long id){
+    public ResponseEntity<String> delete(@PathVariable Long id) {
         if(turmaRepository.existsById(id)){
             turmaRepository.deleteById(id);
             return ResponseEntity.ok("Turma deletada com sucesso!");
