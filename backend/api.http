@@ -1,2 +1,8 @@
 ### Buscar todos os alunos
 GET http://localhost:8080/aluno
+
+### Buscar todos os professores
+GET http://localhost:8080/professor
+
+### Buscar todas as turmas
+GET http://localhost:8080/turma
