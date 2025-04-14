@@ -89,3 +89,7 @@ Modelo Entidade Relacionamento
 ---
 
 ![Modelagem ER](backend/gerenciadorescolar/gerenciadorescolar/src/main/resources/templates/diagrama.png)
+
+Figma
+---
+https://www.figma.com/design/pVo70EptD7JtCAop8NtXLE/projetoweb?node-id=0-1&t=du2nefrqrvr9jsmJ-1
