@@ -109,3 +109,33 @@ Antes de iniciar, você precisa garantir que as seguintes ferramentas estão ins
 - **Maven**;
 - **Node.js**;
 - **MySQL**;
+
+### 2. **Configuração do Backend (Spring Boot)**
+
+#### 📁 Clonar o repositório
+
+```bash
+git clone https://github.com/danisantosss/projetoweb
+cd projetoweb
+```
+
+#### ⚙️ Configurar o banco de dados MySQL
+
+1. Crie um banco de dados no MySQL, `gerenciador_escolar`.
+2. Configure as credenciais no arquivo `src/main/resources/application.properties`:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/gerenciador_escolar
+spring.datasource.username=root
+spring.datasource.password=sua_senha
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+```
+
+#### ▶️ Rodar o backend
+
+```bash
+mvn spring-boot:run
+```
+
+O backend estará disponível em: `http://localhost:8080`
