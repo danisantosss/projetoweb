@@ -139,3 +139,25 @@ mvn spring-boot:run
 ```
 
 O backend estará disponível em: `http://localhost:8080`
+
+### 3. **Configuração do Frontend (React + Vite + TypeScript)**
+
+#### 📁 Navegar até a pasta do frontend
+
+```bash
+cd frontend
+```
+
+#### 📦 Instalar dependências
+
+```bash
+npm install
+```
+
+#### ▶️ Rodar o frontend
+
+```bash
+npm run dev
+```
+
+O frontend estará disponível em: `http://localhost:3000`
