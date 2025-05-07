@@ -8,17 +8,17 @@ O sistema visa facilitar a administração escolar, permitindo que os responsáv
 
 **🔹 Backend:**
 
-Java – Linguagem principal.
+**Java** – Linguagem principal.
 
-Spring Boot – Framework robusto e produtivo para desenvolvimento rápido de APIs.
+**Spring Boot** – Framework robusto e produtivo para desenvolvimento rápido de APIs.
 
-MySQL - Banco de dados relacional, ideal para estruturar os dados de alunos e turmas.
+**MySQL** - Banco de dados relacional, ideal para estruturar os dados de alunos e turmas.
 
 **🔹 Frontend:**
 
-TypeScript - Linguagem principal.
+**TypeScript** - Linguagem principal.
 
-React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenção e escalabilidade.
+**React (Vite)** – Oferece uma interface dinâmica e moderna com melhor manutenção e escalabilidade.
 
 💡 Estratégias de Desenvolvimento
 ---
