@@ -23,13 +23,13 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 💡 Estratégias de Desenvolvimento
 ---
 
-• **Divisão em Módulos:** Separação do backend e frontend para facilitar a manutenção e escalabilidade.
+- **Divisão em Módulos:** Separação do backend e frontend para facilitar a manutenção e escalabilidade.
 
-• **Uso de API REST:** Comunicação entre frontend e backend de forma padronizada.
+- **Uso de API REST:** Comunicação entre frontend e backend de forma padronizada.
 
-• **Banco de Dados Relacional:** Utilização de um banco relacional para garantir integridade dos dados.
+- **Banco de Dados Relacional:** Utilização de um banco relacional para garantir integridade dos dados.
 
-• **Testes básicos:** Verificação das principais funcionalidades para garantir funcionamento adequado.
+- **Testes básicos:** Verificação das principais funcionalidades para garantir funcionamento adequado.
 
 📌 Requisitos Funcionais (RF)
 ---
