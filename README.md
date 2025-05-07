@@ -74,7 +74,7 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 
 • Facilita a integração entre as partes do sistema sem necessidade de configurar múltiplos serviços independentes.
 
-🚀 Plano de Trabalho
+📅 Plano de Trabalho
 ---
 
 • Configuração do projeto.
@@ -97,3 +97,15 @@ Modelo Entidade Relacionamento
 Figma
 ---
 https://www.figma.com/design/pVo70EptD7JtCAop8NtXLE/projetoweb?node-id=0-1&t=du2nefrqrvr9jsmJ-1
+
+🚀 Inicialização do Projeto
+---
+
+### 1. **Pré-requisitos**
+
+Antes de iniciar, você precisa garantir que as seguintes ferramentas estão instaladas no seu sistema:
+
+- **Java 11 ou superior**;
+- **Maven**;
+- **Node.js**;
+- **MySQL**;
