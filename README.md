@@ -161,3 +161,8 @@ npm run dev
 ```
 
 O frontend estará disponível em: `http://localhost:3000`
+
+### 4. **Acessando o Sistema**
+
+- Backend: `http://localhost:8080`
+- Frontend: `http://localhost:3000`
