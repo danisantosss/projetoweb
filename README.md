@@ -63,6 +63,8 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 
 **RNF05** – O sistema deve ser responsivo para acesso em diferentes dispositivos.
 
+**RNF06** – O carregamento das consultas deve ser inferior a 5 segundos.
+
 ⚙ Arquitetura Monolítica
 ---
 
