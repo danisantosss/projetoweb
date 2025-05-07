@@ -77,17 +77,17 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 📅 Plano de Trabalho
 ---
 
-• Configuração do projeto.
+- Configuração do projeto.
 
-• Desenvolvimento do back-end.
+- Desenvolvimento do back-end.
 
-• Desenvolvimento do front-end.
+- Desenvolvimento do front-end.
 
-• Integração entre o back e o front.
+- Integração entre o back e o front.
 
-• Testes e ajutes.
+- Testes e ajutes.
 
-• Finalização e Documentação.
+- Finalização e Documentação.
 
 Modelo Entidade Relacionamento
 ---
