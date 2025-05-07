@@ -68,11 +68,11 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 ⚙ Arquitetura Monolítica
 ---
 
-• É mais simples de desenvolver e manter, ideal para projetos acadêmicos.
+- É mais simples de desenvolver e manter, ideal para projetos acadêmicos.
 
-• Permite uma implementação mais rápida, sem a complexidade da comunicação entre microservices.
+- Permite uma implementação mais rápida, sem a complexidade da comunicação entre microservices.
 
-• Facilita a integração entre as partes do sistema sem necessidade de configurar múltiplos serviços independentes.
+- Facilita a integração entre as partes do sistema sem necessidade de configurar múltiplos serviços independentes.
 
 📅 Plano de Trabalho
 ---
