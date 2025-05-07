@@ -48,6 +48,8 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 
 **RF07** – O sistema deve permitir associar alunos e professores a turmas e visualizar essa associação.
 
+**RF08** – O sistema deve permitir consultar alunos, turmas e professores.
+
 
 📌 Requisitos Não Funcionais (RNF)
 ---
