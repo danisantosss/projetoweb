@@ -1,4 +1,5 @@
 import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 export default function Register() {
   return (
@@ -35,6 +36,7 @@ export default function Register() {
           </form>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

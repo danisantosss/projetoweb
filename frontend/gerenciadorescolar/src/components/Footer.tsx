@@ -9,6 +9,20 @@ export function Footer() {
           <p>Professor</p>
           <p>Turmas</p>
         </div>
+        <div>
+          <p className="font-semibold">Atalhos</p>
+          <p>Dashbaord</p>
+          <p>Aluno</p>
+          <p>Professor</p>
+          <p>Turmas</p>
+        </div>
+        <div>
+          <p className="font-semibold">Atalhos</p>
+          <p>Dashbaord</p>
+          <p>Aluno</p>
+          <p>Professor</p>
+          <p>Turmas</p>
+        </div>
       </footer>
     );
   }
