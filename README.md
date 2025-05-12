@@ -8,28 +8,28 @@ O sistema visa facilitar a administração escolar, permitindo que os responsáv
 
 **🔹 Backend:**
 
-Java – Linguagem principal.
+**Java** – Linguagem principal.
 
-Spring Boot – Framework robusto e produtivo para desenvolvimento rápido de APIs.
+**Spring Boot** – Framework robusto e produtivo para desenvolvimento rápido de APIs.
 
-MySQL - Banco de dados relacional, ideal para estruturar os dados de alunos e turmas.
+**MySQL** - Banco de dados relacional, ideal para estruturar os dados de alunos e turmas.
 
 **🔹 Frontend:**
 
-TypeScript - Linguagem principal.
+**TypeScript** - Linguagem principal.
 
-React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenção e escalabilidade.
+**React (Vite)** – Oferece uma interface dinâmica e moderna com melhor manutenção e escalabilidade.
 
 💡 Estratégias de Desenvolvimento
 ---
 
-• **Divisão em Módulos:** Separação do backend e frontend para facilitar a manutenção e escalabilidade.
+- **Divisão em Módulos:** Separação do backend e frontend para facilitar a manutenção e escalabilidade.
 
-• **Uso de API REST:** Comunicação entre frontend e backend de forma padronizada.
+- **Uso de API REST:** Comunicação entre frontend e backend de forma padronizada.
 
-• **Banco de Dados Relacional:** Utilização de um banco relacional para garantir integridade dos dados.
+- **Banco de Dados Relacional:** Utilização de um banco relacional para garantir integridade dos dados.
 
-• **Testes básicos:** Verificação das principais funcionalidades para garantir funcionamento adequado.
+- **Testes básicos:** Verificação das principais funcionalidades para garantir funcionamento adequado.
 
 📌 Requisitos Funcionais (RF)
 ---
@@ -48,6 +48,8 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 
 **RF07** – O sistema deve permitir associar alunos e professores a turmas e visualizar essa associação.
 
+**RF08** – O sistema deve permitir consultar alunos, turmas e professores.
+
 
 📌 Requisitos Não Funcionais (RNF)
 ---
@@ -61,31 +63,106 @@ React (Vite) – Oferece uma interface dinâmica e moderna com melhor manutenç�
 
 **RNF05** – O sistema deve ser responsivo para acesso em diferentes dispositivos.
 
+**RNF06** – O carregamento das consultas deve ser inferior a 5 segundos.
+
 ⚙ Arquitetura Monolítica
 ---
 
-• É mais simples de desenvolver e manter, ideal para projetos acadêmicos.
+- É mais simples de desenvolver e manter, ideal para projetos acadêmicos.
 
-• Permite uma implementação mais rápida, sem a complexidade da comunicação entre microservices.
+- Permite uma implementação mais rápida, sem a complexidade da comunicação entre microservices.
 
-• Facilita a integração entre as partes do sistema sem necessidade de configurar múltiplos serviços independentes.
+- Facilita a integração entre as partes do sistema sem necessidade de configurar múltiplos serviços independentes.
 
-🚀 Plano de Trabalho
+📅 Plano de Trabalho
 ---
 
-• Configuração do projeto.
+- Configuração do projeto.
 
-• Desenvolvimento do back-end.
+- Desenvolvimento do back-end.
 
-• Desenvolvimento do front-end.
+- Desenvolvimento do front-end.
 
-• Integração entre o back e o front.
+- Integração entre o back e o front.
 
-• Testes e ajutes.
+- Testes e ajutes.
 
-• Finalização e Documentação.
+- Finalização e Documentação.
 
 Modelo Entidade Relacionamento
 ---
 
 ![Modelagem ER](backend/gerenciadorescolar/gerenciadorescolar/src/main/resources/templates/diagrama.png)
+
+Figma
+---
+https://www.figma.com/design/pVo70EptD7JtCAop8NtXLE/projetoweb?node-id=0-1&t=du2nefrqrvr9jsmJ-1
+
+🚀 Inicialização do Projeto
+---
+
+### 1. **Pré-requisitos**
+
+Antes de iniciar, você precisa garantir que as seguintes ferramentas estão instaladas no seu sistema:
+
+- **Java 11 ou superior**;
+- **Maven**;
+- **Node.js**;
+- **MySQL**;
+
+### 2. **Configuração do Backend (Spring Boot)**
+
+#### 📁 Clonar o repositório
+
+```bash
+git clone https://github.com/danisantosss/projetoweb
+cd projetoweb
+```
+
+#### ⚙️ Configurar o banco de dados MySQL
+
+1. Crie um banco de dados no MySQL, `gerenciador_escolar`.
+2. Configure as credenciais no arquivo `src/main/resources/application.properties`:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/gerenciador_escolar
+spring.datasource.username=root
+spring.datasource.password=sua_senha
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+```
+
+#### ▶️ Rodar o backend
+
+```bash
+mvn spring-boot:run
+```
+
+O backend estará disponível em: `http://localhost:8080`
+
+### 3. **Configuração do Frontend (React + Vite + TypeScript)**
+
+#### 📁 Navegar até a pasta do frontend
+
+```bash
+cd frontend
+```
+
+#### 📦 Instalar dependências
+
+```bash
+npm install
+```
+
+#### ▶️ Rodar o frontend
+
+```bash
+npm run dev
+```
+
+O frontend estará disponível em: `http://localhost:3000`
+
+### 4. **Acessando o Sistema**
+
+- Backend: `http://localhost:8080`
+- Frontend: `http://localhost:3000`
