@@ -20,6 +20,8 @@ O sistema visa facilitar a administração escolar, permitindo que os responsáv
 
 **React (Vite)** – Oferece uma interface dinâmica e moderna com melhor manutenção e escalabilidade.
 
+**Tailwind CSS** – Framework utilitário para estilização, permitindo desenvolvimento ágil e responsivo com consistência visual.
+
 💡 Estratégias de Desenvolvimento
 ---
 
