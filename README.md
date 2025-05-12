@@ -65,6 +65,8 @@ O sistema visa facilitar a administração escolar, permitindo que os responsáv
 
 **RNF06** – O carregamento das consultas deve ser inferior a 5 segundos.
 
+**RNF07** – O sistema deve utilizar o framework Tailwind CSS para estilização do frontend.
+
 ⚙ Arquitetura Monolítica
 ---
 
