@@ -1,6 +1,6 @@
 package com.projetoweb.gerenciadorescolar.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,7 +21,7 @@ public class Aluno {
     private String nome;
     private String cpf;
     private String email;
-    private Date dataNascimento;
+    private LocalDate dataNascimento;
 
     @ManyToOne
     @JoinColumn(name = "turma_id", nullable = false)
