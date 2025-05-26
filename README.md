@@ -20,6 +20,8 @@ O sistema visa facilitar a administração escolar, permitindo que os responsáv
 
 **React (Vite)** – Oferece uma interface dinâmica e moderna com melhor manutenção e escalabilidade.
 
+**Tailwind CSS** – Framework para estilização, permitindo desenvolvimento ágil e responsivo com consistência visual.
+
 💡 Estratégias de Desenvolvimento
 ---
 
@@ -64,6 +66,8 @@ O sistema visa facilitar a administração escolar, permitindo que os responsáv
 **RNF05** – O sistema deve ser responsivo para acesso em diferentes dispositivos.
 
 **RNF06** – O carregamento das consultas deve ser inferior a 5 segundos.
+
+**RNF07** – O sistema deve utilizar o framework Tailwind CSS para estilização do frontend.
 
 ⚙ Arquitetura Monolítica
 ---
