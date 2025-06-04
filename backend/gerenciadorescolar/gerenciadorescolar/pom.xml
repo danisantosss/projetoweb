@@ -28,8 +28,6 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
-		 <sonar.organization>danisantosss</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -62,12 +60,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-		<groupId>org.mockito</groupId>
-		<artifactId>mockito-core</artifactId>
-		<scope>test</scope>
-		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -95,24 +89,17 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.10</version>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>8.4.0</version>
 				<executions>
-				<execution>
+					<execution>
 					<goals>
-					<goal>prepare-agent</goal>
+						<goal>check</goal>
 					</goals>
-				</execution>
-				<execution>
-					<id>report</id>
-					<phase>verify</phase>
-					<goals>
-					<goal>report</goal>
-					</goals>
-				</execution>
+					</execution>
 				</executions>
-			</plugin>
+				</plugin>
 		</plugins>
 	</build>
 

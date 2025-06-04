@@ -22,6 +22,9 @@ public class Aluno {
     private String cpf;
     private String email;
     private LocalDate dataNascimento;
+    private float nota1;
+    private float nota2;
+    private float nota3;
 
     @ManyToOne
     @JoinColumn(name = "turma_id", nullable = false)
