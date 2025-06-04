@@ -1,7 +1,7 @@
 # 📚 Gerenciador Escolar
-Este é um sistema web para o gerenciamento de alunos de uma escola, permitindo o cadastro, consulta, atualização e remoção de alunos, além da associação com turmas.
+Este é um sistema web para o gerenciamento de alunos de uma escola, permitindo o cadastro, consulta, atualização e remoção de alunos, além da associação com turmas e o registro de notas.
 
-O sistema visa facilitar a administração escolar, permitindo que os responsáveis possam gerenciar o cadastro de alunos e suas respectivas turmas de forma eficiente e organizada.
+O sistema visa facilitar a administração escolar, permitindo que os responsáveis possam gerenciar de forma eficiente e organizada o cadastro de alunos, suas respectivas turmas e o acompanhamento de seu desempenho acadêmico por meio do lançamento de notas.
 
 🛠 Tecnologias Utilizadas
 ---
@@ -36,7 +36,7 @@ O sistema visa facilitar a administração escolar, permitindo que os responsáv
 📌 Requisitos Funcionais (RF)
 ---
 
-**RF01** – O sistema deve permitir o cadastro de alunos com nome, CPF, email e data de nascimento.
+**RF01** – O sistema deve permitir o cadastro de alunos com nome, CPF, email, data de nascimento e nota.
 
 **RF02** – O sistema deve permitir a listagem, edição e remoção de alunos.
 
