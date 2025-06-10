@@ -46,6 +46,9 @@ public class AlunoController {
             aluno.setEmail(dados.getEmail());
             aluno.setDataNascimento(dados.getDataNascimento());
             aluno.setTurma(dados.getTurma());
+            aluno.setNota1(dados.getNota1());
+            aluno.setNota2(dados.getNota2());
+            aluno.setNota3(dados.getNota3());
             Aluno atualizado = alunoRepository.save(aluno);
             return ResponseEntity.ok(new AlunoDTO(atualizado));
         }).orElse(ResponseEntity.notFound().build());
