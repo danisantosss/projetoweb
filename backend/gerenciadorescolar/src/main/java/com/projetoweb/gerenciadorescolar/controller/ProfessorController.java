@@ -19,7 +19,7 @@ import com.projetoweb.gerenciadorescolar.entity.ProfessorDTO;
 import com.projetoweb.gerenciadorescolar.repository.ProfessorRepository;
 
 @RestController
-@RequestMapping("professor")
+@RequestMapping("/professor")
 public class ProfessorController {
 
     @Autowired

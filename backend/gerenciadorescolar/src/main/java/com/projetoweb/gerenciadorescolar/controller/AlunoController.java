@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("aluno")
+@RequestMapping("/aluno")
 public class AlunoController {
 
     @Autowired

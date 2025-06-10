@@ -19,7 +19,7 @@ import com.projetoweb.gerenciadorescolar.entity.TurmaDTO;
 import com.projetoweb.gerenciadorescolar.repository.TurmaRepository;
 
 @RestController
-@RequestMapping("turma")
+@RequestMapping("/turma")
 public class TurmaController {
 
     @Autowired
