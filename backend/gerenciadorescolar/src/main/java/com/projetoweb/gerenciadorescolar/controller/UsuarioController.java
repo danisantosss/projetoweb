@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/usuario")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class UsuarioController {
     
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/registrar")
     public ResponseEntity<?> cadastrarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
         if (usuarioRepository.existsByUsername(usuarioDTO.getUsername())) {
             return ResponseEntity.badRequest().body("Usuário já existe");
@@ -33,5 +33,16 @@ public class UsuarioController {
 
         usuarioRepository.save(usuario);
         return ResponseEntity.status(201).body("Usuario cadastrado com sucesso!");
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody UsuarioDTO usuarioDTO) {
+        Usuario usuario = usuarioRepository.findByUsername(usuarioDTO.getUsername());
+        
+        if (usuario == null || !usuario.getSenha().equals(usuarioDTO.getSenha())) {
+            return ResponseEntity.status(401).body("Usuário ou senha inválidos!");
+        }
+
+        return ResponseEntity.ok("Login realizado com sucesso!");
     }
 }
