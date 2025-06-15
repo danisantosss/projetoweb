@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
 import Dashboard from './pages/Dashboard';
+import Aluno from './pages/Aluno';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -12,14 +13,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
-        <Route 
-          path="/dashboard" 
-          element={(
-            <PrivateRoute>
-              <Dashboard />
-            </PrivateRoute>
-          )}
-        />
+        <Route path="/dashboard" element={
+          <PrivateRoute><Dashboard /></PrivateRoute>
+        } />
+        <Route path="/alunos" element={
+          <PrivateRoute><Aluno /></PrivateRoute>
+        } />
       </Routes>
     </Router>
   );
