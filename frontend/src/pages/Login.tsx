@@ -20,7 +20,9 @@ export default function Login() {
   const texto = await response.text();
 
   if (response.ok) {
-        setMensagem('✅ Login realizado com sucesso!');
+    localStorage.setItem('usuarioLogado', 'true');
+    setMensagem('✅ Login realizado com sucesso!');
+    window.location.href = '/dashboard';
       } else {
         setMensagem(`❌ ${texto}`);
       }
