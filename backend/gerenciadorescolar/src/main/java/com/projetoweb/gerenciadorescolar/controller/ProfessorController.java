@@ -44,7 +44,7 @@ public class ProfessorController {
             professor.setCpf(dados.getCpf());
             professor.setEmail(dados.getEmail());
             professor.setDisciplina(dados.getDisciplina());
-            professor.setTurmas(dados.getTurmas());
+            professor.setTurma(dados.getTurma());
 
             Professor professorAtualizado = professorRepository.save(professor);
             return ResponseEntity.ok(new ProfessorDTO(professorAtualizado));
