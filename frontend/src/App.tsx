@@ -4,7 +4,8 @@ import Login from './pages/Login';
 import Registro from './pages/Registro';
 import Dashboard from './pages/Dashboard';
 import Aluno from './pages/Aluno';
-import Professor from './pages/Professor'
+import Professor from './pages/Professor';
+import Turma from './pages/Turma';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         } />
         <Route path="/professor" element={
           <PrivateRoute><Professor /></PrivateRoute>
+        } />
+        <Route path="/turma" element={
+          <PrivateRoute><Turma /></PrivateRoute>
         } />
       </Routes>
     </Router>
