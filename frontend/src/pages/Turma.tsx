@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
 interface Turma {
@@ -106,7 +105,6 @@ export default function Turmas() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <main className="flex-1 px-4 py-8 max-w-6xl mx-auto">
         <h1 className="text-2xl font-bold mb-6">Registrar Turma</h1>
 
