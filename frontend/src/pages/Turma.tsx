@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
@@ -13,7 +13,6 @@ export default function Turmas() {
   const [anoLetivo, setAnoLetivo] = useState<number | "">("");
   const [turmas, setTurmas] = useState<Turma[]>([]);
 
-  // Modal edição
   const [turmaEditando, setTurmaEditando] = useState<Turma | null>(null);
   const [editNome, setEditNome] = useState("");
   const [editAnoLetivo, setEditAnoLetivo] = useState<number | "">("");
