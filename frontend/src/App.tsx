@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Registro from './pages/Registro';
 import Dashboard from './pages/Dashboard';
 import Aluno from './pages/Aluno';
+import Professor from './pages/Professor'
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -16,8 +17,11 @@ function App() {
         <Route path="/dashboard" element={
           <PrivateRoute><Dashboard /></PrivateRoute>
         } />
-        <Route path="/alunos" element={
+        <Route path="/aluno" element={
           <PrivateRoute><Aluno /></PrivateRoute>
+        } />
+        <Route path="/professor" element={
+          <PrivateRoute><Professor /></PrivateRoute>
         } />
       </Routes>
     </Router>

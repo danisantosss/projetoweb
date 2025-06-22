@@ -27,4 +27,8 @@ public class Turma {
     @OneToMany(mappedBy = "turma", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Aluno> alunos;
+
+    @OneToMany(mappedBy = "turma", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Professor> professores;
 }
