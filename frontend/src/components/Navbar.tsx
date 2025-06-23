@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import logo from '../assets/escola.png';
 
 interface NavbarProps {
   isLoggedIn: boolean;
@@ -9,11 +10,11 @@ export function Navbar({ isLoggedIn, onLogout }: NavbarProps) {
   const navigate = useNavigate();
 
   return (
-    <nav className="flex items-center justify-between p-4 border-b bg-white">
+    <nav className="flex items-center justify-between p-7 border-b bg-blue-800">
       <div className="text-xl font-bold cursor-pointer" onClick={() => navigate("/")}>
-        🎓
+        <img src={logo} alt="Logo" className="h-9 w-10" />
       </div>
-      <ul className="flex gap-6 text-sm">
+      <ul className="flex gap-6 text-md text-white">
         <li><Link to="/dashboard" className="hover:underline">Dashboard</Link></li>
         <li><Link to="/aluno" className="hover:underline">Alunos</Link></li>
         <li><Link to="/professor" className="hover:underline">Professores</Link></li>
@@ -25,7 +26,7 @@ export function Navbar({ isLoggedIn, onLogout }: NavbarProps) {
           <>
             <button
               onClick={() => navigate("/login")}
-              className="border px-4 py-1 rounded text-sm"
+              className="border px-4 py-1 rounded text-sm bg-white"
             >
               Entrar
             </button>
@@ -42,8 +43,7 @@ export function Navbar({ isLoggedIn, onLogout }: NavbarProps) {
               onLogout();
               navigate('/login');
             }}
-            className="bg-black text-white border px-4 py-1 rounded text-sm"
-          >
+            className="bg-white font-bold text-black border px-4 py-1 rounded text-sm">
             Sair
           </button>
         )}
