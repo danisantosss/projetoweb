@@ -15,11 +15,11 @@ export function Navbar({ isLoggedIn, onLogout }: NavbarProps) {
         <img src={logo} alt="Logo" className="h-9 w-10" />
       </div>
       <ul className="flex gap-6 text-md text-white">
-        <li><Link to="/dashboard" className="hover:underline">Dashboard</Link></li>
+        <li><Link to="/inicio" className="hover:underline">Início</Link></li>
         <li><Link to="/aluno" className="hover:underline">Alunos</Link></li>
         <li><Link to="/professor" className="hover:underline">Professores</Link></li>
         <li><Link to="/turma" className="hover:underline">Turmas</Link></li>
-        <li><Link to="/sobre" className="hover:underline">Sobre nós</Link></li>
+        <li><Link to="/notas" className="hover:underline">Notas</Link></li>
       </ul>
       <div className="flex gap-2">
         {!isLoggedIn ? (

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projetoweb.gerenciadorescolar.entity.Aluno;
@@ -88,5 +89,10 @@ public class AlunoController {
             return ResponseEntity.ok("Aluno deletado com sucesso!");
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aluno não encontrado.");
+    }
+
+    @GetMapping("/buscar")
+    public List<Aluno> buscarPorNome(@RequestParam String nome) {
+        return alunoRepository.findByNomeContainingIgnoreCase(nome);
     }
 }

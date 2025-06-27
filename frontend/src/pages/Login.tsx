@@ -8,20 +8,20 @@ export default function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
-  try {
+
+    try {
       const response = await fetch('http://localhost:8080/usuario/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, senha }),
-  });
+      });
 
-  const texto = await response.text();
+      const texto = await response.text();
 
-  if (response.ok) {
-    localStorage.setItem('usuarioLogado', 'true');
-    setMensagem('✅ Login realizado com sucesso!');
-    window.location.href = '/dashboard';
+      if (response.ok) {
+        localStorage.setItem('usuarioLogado', 'true');
+        setMensagem('✅ Login realizado com sucesso!');
+        window.location.href = '/inicio';
       } else {
         setMensagem(`❌ ${texto}`);
       }
@@ -30,7 +30,7 @@ export default function Login() {
     }
   };
 
-   return (
+  return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1 flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-4xl font-bold mb-4">Gerenciador Escolar</h1>

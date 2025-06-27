@@ -15,13 +15,13 @@ export default function Registro() {
       return;
     }
 
-  const data = {
+    const data = {
       username: username,
       senha: senha,
-  };
+    };
 
-  try {
-    const response = await fetch('http://localhost:8080/usuario/registrar', {
+    try {
+      const response = await fetch('http://localhost:8080/usuario/registrar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
