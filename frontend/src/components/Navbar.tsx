@@ -26,7 +26,7 @@ export function Navbar({ isLoggedIn, onLogout }: NavbarProps) {
           <>
             <button
               onClick={() => navigate("/login")}
-              className="border px-4 py-1 rounded text-sm bg-white"
+              className="px-4 py-1 rounded text-sm bg-black text-white"
             >
               Entrar
             </button>

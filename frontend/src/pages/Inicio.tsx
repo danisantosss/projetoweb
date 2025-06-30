@@ -10,7 +10,7 @@ export default function Inicio() {
           Acesse rapidamente as funcionalidades do sistema para gerenciar alunos, professores, turmas e notas.
         </p>
 
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full max-w-6xl">
+        <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 w-full max-w-6xl">
           <Link to="/aluno" className="bg-white p-6 rounded shadow border hover:shadow-md transition text-left">
             <h2 className="text-xl font-semibold mb-2">Alunos</h2>
             <p className="text-sm text-gray-500">Gerencie todos os alunos cadastrados.</p>
