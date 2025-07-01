@@ -36,8 +36,9 @@ jobs:
           name: relatorio-cobertura
           path: target/site/jacoco
 
-      - name: OWASP Dependency Check
-        uses: dependency-check/cli-action@v2
+      - name: Run OWASP Dependency Check
+        uses: jeremylong/DependencyCheck@v3.3.2
         with:
-            scan-path: './backend/gerenciadorescolar'
+            scan: './backend/gerenciadorescolar'
             format: 'ALL'
+            failOnCVSS: '7'
