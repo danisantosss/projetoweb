@@ -1,4 +1,4 @@
-name: Qualidade
+name: Qualidade Backend
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: backend
+        working-directory: backend/gerenciadorescolar
 
     steps:
       - name: Checkout do código
@@ -33,5 +33,5 @@ jobs:
       - name: Upload do relatório de cobertura
         uses: actions/upload-artifact@v4
         with:
-            name: relatorio-cobertura
-            path: backend/target/site/jacoco
+          name: relatorio-cobertura
+          path: backend/gerenciadorescolar/target/site/jacoco
