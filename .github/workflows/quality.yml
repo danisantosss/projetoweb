@@ -1,0 +1,37 @@
+name: Qualidade
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  backend-tests:
+    name: Testes e Cobertura (JUnit + JaCoCo)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Executar testes com cobertura
+        run: mvn clean test
+
+      - name: Gerar relatório JaCoCo
+        run: mvn jacoco:report
+
+      - name: Upload do relatório de cobertura
+        uses: actions/upload-artifact@v3
+        with:
+          name: relatorio-cobertura
+          path: backend/target/site/jacoco
