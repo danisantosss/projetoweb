@@ -8,7 +8,7 @@ on:
 
 jobs:
   backend-tests:
-    name: Testes e Cobertura (JUnit + JaCoCo)
+    name: Testes, Cobertura e OWASP
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -36,16 +36,22 @@ jobs:
           name: relatorio-cobertura
           path: target/site/jacoco
 
-      - name: Definir JAVA_HOME para o OWASP Dependency Check
-        run: echo "JAVA_HOME=$JAVA_HOME_17_X64" >> $GITHUB_ENV
+      - name: Baixar OWASP Dependency Check
+        run: |
+          curl -L -o dc.zip https://github.com/jeremylong/DependencyCheck/releases/download/v8.4.0/dependency-check-8.4.0-release.zip
+          unzip dc.zip -d dc
 
-      - name: Scan de vulnerabilidades OWASP Dependency Check
-        uses: dependency-check/Dependency-Check_Action@main
-        env:
-          JAVA_HOME: ${{ env.JAVA_HOME }}
+      - name: Executar OWASP Dependency Check
+        run: |
+          ./dc/dependency-check/bin/dependency-check.sh \
+            --project "gerenciadorescolar" \
+            --scan ./ \
+            --format HTML \
+            --out ./owasp-report \
+            --failOnCVSS 7
+
+      - name: Upload do relatório OWASP
+        uses: actions/upload-artifact@v4
         with:
-          project: "gerenciadorescolar"
-          path: "./backend/gerenciadorescolar"
-          format: "HTML"
-          out: "reports"
-          args: "--failOnCVSS 7"
+          name: relatorio-owasp
+          path: backend/gerenciadorescolar/owasp-report
