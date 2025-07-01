@@ -36,9 +36,17 @@ jobs:
           name: relatorio-cobertura
           path: target/site/jacoco
 
-      - name: Run OWASP Dependency Check
-        uses: jeremylong/DependencyCheck@v3.3.2
+      - name: Baixar OWASP Dependency Check CLI
+        run: |
+          curl -LO https://github.com/jeremylong/DependencyCheck/releases/download/v8.3.2/dependency-check-8.3.2-release.zip
+          unzip dependency-check-8.3.2-release.zip
+
+      - name: Rodar OWASP Dependency Check
+        run: |
+          ./dependency-check/bin/dependency-check.sh --project "GerenciadorEscolar" --scan ./backend/gerenciadorescolar --format "HTML" --out ./dependency-check-report
+
+      - name: Upload do relatório OWASP
+        uses: actions/upload-artifact@v4
         with:
-            scan: './backend/gerenciadorescolar'
-            format: 'ALL'
-            failOnCVSS: '7'
+          name: owasp-report
+          path: ./dependency-check-report
