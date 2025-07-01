@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.projetoweb.gerenciadorescolar.entity.Aluno;
 import com.projetoweb.gerenciadorescolar.entity.Turma;
 import com.projetoweb.gerenciadorescolar.repository.AlunoRepository;
+import com.projetoweb.gerenciadorescolar.repository.TurmaRepository;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -15,6 +17,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -27,6 +30,9 @@ public class AlunoControllerTest {
 
     @MockBean
     private AlunoRepository alunoRepository;
+
+    @MockBean
+    private TurmaRepository turmaRepository;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -49,13 +55,14 @@ public class AlunoControllerTest {
     @Test
     void criarNovoAluno() throws Exception {
         Aluno aluno = criarAlunoDeTeste();
+        when(turmaRepository.findById(1L)).thenReturn(Optional.of(aluno.getTurma())); // <== mock da turma
         when(alunoRepository.save(any(Aluno.class))).thenReturn(aluno);
 
         mockMvc.perform(post("/aluno")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(aluno)))
-            .andExpect(status().isCreated())
-            .andExpect(jsonPath("$.nome").value("João"));
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.nome").value("João"));
     }
 
     @Test
@@ -64,20 +71,21 @@ public class AlunoControllerTest {
         when(alunoRepository.findAll()).thenReturn(List.of(aluno));
 
         mockMvc.perform(get("/aluno"))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$[0].nome").value("João"));
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].nome").value("João"));
     }
 
     @Test
     void atualizarAlunoExistente() throws Exception {
         Aluno aluno = criarAlunoDeTeste();
+        when(turmaRepository.findById(1L)).thenReturn(Optional.of(aluno.getTurma())); // <== mock da turma
         when(alunoRepository.findById(1L)).thenReturn(Optional.of(aluno));
         when(alunoRepository.save(any(Aluno.class))).thenReturn(aluno);
 
         mockMvc.perform(put("/aluno/1")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(aluno)))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.nome").value("João"));
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.nome").value("João"));
     }
 }
