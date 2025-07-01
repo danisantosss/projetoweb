@@ -41,14 +41,15 @@ jobs:
           curl -L -o dc.zip https://github.com/jeremylong/DependencyCheck/releases/download/v8.2.1/dependency-check-8.2.1-release.zip
           unzip dc.zip -d dc
 
-      - name: Executar OWASP Dependency Check
+      - name: Executar OWASP Dependency Check (formato seguro)
         run: |
           ./dc/dependency-check/bin/dependency-check.sh \
             --project "gerenciadorescolar" \
             --scan ./ \
-            --format HTML \
+            --format XML \
             --out ./owasp-report \
-            --failOnCVSS 7
+            --failOnCVSS 7 \
+            --disableAssembly
 
       - name: Upload do relatório OWASP
         uses: actions/upload-artifact@v4
