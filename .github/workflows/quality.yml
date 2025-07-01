@@ -35,3 +35,9 @@ jobs:
         with:
           name: relatorio-cobertura
           path: target/site/jacoco
+
+      - name: OWASP Dependency Check
+        uses: dependency-check/cli-action@v2
+        with:
+            scan-path: './backend/gerenciadorescolar'
+            format: 'ALL'
