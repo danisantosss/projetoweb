@@ -1,4 +1,4 @@
-name: Qualidade Backend
+name: Qualidade
 
 on:
   push:
@@ -49,6 +49,7 @@ jobs:
             --format HTML \
             --out ./owasp-report \
             --failOnCVSS 7
+            --disableHtmlReport
 
       - name: Upload do relatório OWASP
         uses: actions/upload-artifact@v4
