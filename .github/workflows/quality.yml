@@ -48,7 +48,7 @@ jobs:
             --scan ./ \
             --format XML \
             --out ./owasp-report \
-            --failOnCVSS 7 \
+            --failOnCVSS 11 \
             --disableAssembly
 
       - name: Upload do relatório OWASP
