@@ -37,9 +37,9 @@ jobs:
           path: target/site/jacoco
 
       - name: Scan de vulnerabilidades OWASP Dependency Check
-        uses: jeremylong/DependencyCheck-action@v2
+        uses: dependency-check/Dependency-Check_Action@main
         with:
-          project: 'gerenciadorescolar'
-          scan: 'backend/gerenciadorescolar'
-          format: 'ALL'
-          failOnCVSS: '7'
+            project: "gerenciadorescolar"
+            path: "./backend/gerenciadorescolar"
+            format: "HTML" 
+            failOnCVSS: "7"
